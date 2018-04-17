@@ -1,0 +1,67 @@
+
+<sly data-sly-test.PlayerData="${properties.playerInfo}"/>
+
+<sly data-sly-test.Date="${properties.articleDate.getTime.toString}"/>
+  <sly data-sly-test="${wcmmode.edit && !PlayerData}">
+    <div class="cq-placeholder cq-marker-start" data-emptytext="Players Component"></div>
+  </sly>
+
+
+
+	<sly data-sly-use.date="${'com.argil.core.models.DateFormatter' @ date=currentPage.lastModified, format='dd/MM/yyyy'}">
+    	A ${date.value}
+
+    </sly>
+
+
+
+
+ <ul sly data-sly-list.item="${'com.argil.core.models.DateFormatter' @ date=properties.jcr:created, format='dd/MM/yyyy'}">
+       <li>${itemList.count}</li>
+
+
+
+
+<sly data-sly-use.x="${'com.argil.core.models.DateFormatter' @ date=properties.jcr:created, format='dd/MM/yyyy'}">
+	<ul sly data-sly-list.abc="${x.fun}">
+    <li>${abc}</li>
+	</ul>
+
+
+        </ul>    <br/>
+
+
+
+
+<sly data-sly-use.dat="${'com.argil.core.models.DateFormatter' @ date=properties.jcr:created, format='dd/MM/yyyy'}">
+    	B ${dat.value}
+         B ${date.arr}<br/>
+    </sly>
+
+
+
+<sly data-sly-use.date="com.argil.core.models.DateFormatter2"></sly>
+Date getproperty 1:${date.getDate}
+
+
+<sly data-sly-use.date="com.argil.core.models.Deformatter3"></sly>
+Date getproperty 2:${date.getName}
+
+
+<sly data-sly-test="${PlayerData}">
+<sly data-sly-use.PlayerModel="com.argil.core.models.Service"></sly>
+ <sly data-sly-list.abc="${PlayerModel.fun}">
+<br />
+<br />
+<div > Date: ${Date.getTime.toString}</div>
+  <div class="a"> Name:${abc.userName}</div>
+  <div class ="b">Desc:${abc.description}</div>
+  <div class ="c"> <img src="${abc.image}" /></div>
+  image:${abc.image}
+
+</sly>
+</sly>
+
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"/>
+<sly data-sly-call="${clientLib.all @ categories='a'}" />
+

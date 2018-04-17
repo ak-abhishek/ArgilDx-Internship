@@ -1,0 +1,14 @@
+
+
+Day
+<sly data-sly-use.x="${'com.argil.core.models.Deformatter3'}">
+	<ul sly data-sly-list.abc="${x.dayOfTheWeek}">
+    <li>${abc.toString}</li>
+	</ul>
+
+
+Next 5 Same Day
+<sly data-sly-use.x="${'com.argil.core.models.Deformatter3'}">
+	<ul sly data-sly-list.abc="${x.nextSameDay}">
+    <li>${abc.toString}</li>
+	</ul>

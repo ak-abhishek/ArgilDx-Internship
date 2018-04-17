@@ -1,0 +1,16 @@
+com\argil\core\filters\LoggingFilter.class
+com\argil\core\models\Use.class
+com\argil\core\package-info.class
+com\argil\core\models\DateFormatterWCM.class
+com\argil\core\models\nishantgupta.class
+com\argil\core\servlets\SimpleServlet.class
+com\argil\core\listeners\SimpleResourceListener.class
+com\argil\core\services\ImplementService.class
+com\argil\core\models\DateFormatter.class
+com\argil\core\models\DateFormatter2.class
+com\argil\core\schedulers\SimpleScheduledTask.class
+com\argil\core\services\TestService.class
+com\argil\core\models\Service.class
+com\argil\core\models\Sling.class
+com\argil\core\models\Deformatter3.class
+com\argil\core\models\HelloWorldModel.class

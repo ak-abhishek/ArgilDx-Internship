@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/com.argil.core.services.ImplementService">
+    <OCD id="com.argil.core.services.ImplementService" name="%com.argil.core.services.ImplementService.name" description="%com.argil.core.services.ImplementService.description">
+        <AD id="author" type="String" name="%com.argil.core.services.ImplementService.author.name" description="%com.argil.core.services.ImplementService.author.description">
+            <Option value="Abhishek" label="Abhishek"/>
+            <Option value="Unauthorised user" label="New_User"/>
+        </AD>
+        <AD id="status" type="String" default="status" name="%com.argil.core.services.ImplementService.status.name" description="%com.argil.core.services.ImplementService.status.description"/>
+        <AD id="multi" type="String" default="Singing,Dancing,Reading" name="%com.argil.core.services.ImplementService.multi.name" description="%com.argil.core.services.ImplementService.multi.description" cardinality="2147483647"/>
+    </OCD>
+    <Designate pid="com.argil.core.services.ImplementService">
+        <Object ocdref="com.argil.core.services.ImplementService"/>
+    </Designate>
+</metatype:MetaData>
